@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paket Tour & Harga — Jelajah Alam</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: #f8f9fa;
+        }
+
+        /* Navigasi */
+        nav {
+            background: #2d6a4f;
+            padding: 15px 5%;
+            position: sticky;
+            top: 0;
+        }
+
+        nav .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            display: inline-block;
+        }
+
+        nav .menu {
+            float: right;
+        }
+
+        nav .menu a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 16px;
+        }
+
+        nav .menu a:hover {
+            color: #b7e4c7;
+        }
+
+        /* Konten Halaman Paket */
+        .container {
+            padding: 50px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2d6a4f;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .sub-judul {
+            text-align: center;
+            color: #666;
+            margin-bottom: 50px;
+            font-size: 17px;
+        }
+
+        .paket-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+
+        .paket-kartu {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            width: 360px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .paket-kartu:hover {
+            transform: translateY(-8px);
+        }
+
+        .paket-header {
+            background: #2d6a4f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .paket-header h3 {
+            font-size: 22px;
+        }
+
+        .paket-harga {
+            font-size: 28px;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+
+        .paket-isi {
+            padding: 25px;
+        }
+
+        .paket-isi ul {
+            list-style: none;
+        }
+
+        .paket-isi li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #ddd;
+            color: #555;
+        }
+
+        .paket-isi li:last-child {
+            border-bottom: none;
+        }
+
+        .btn-pesan {
+            display: block;
+            background: #52b788;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .btn-pesan:hover {
+            background: #40916c;
+        }
+
+        footer {
+            background: #2d6a4f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            margin-top: 60px;
+        }
+
+        @media(max-width:768px) {
+            nav .menu { float: none; margin-top: 10px; }
+            nav .menu a { margin: 0 8px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menu Navigasi -->
+    <nav>
+        <span class="logo">🌿 Wisata Alam</span>
+        <div class="menu">
+            <a href="index.html">Beranda</a>
+            <a href="paket.html">paket dan harga</a>
+            <a href="index.html#tentang">Tentang</a>
+            <a href="index.html#kontak">Kontak</a>
+        </div>
+    </nav>
+
+    <!-- Isi Halaman Paket Tour -->
+    <div class="container">
+        <h1>📋 Paket Tour & Harga</h1>
+        <p class="sub-judul">Pilih paket liburan yang sesuai dengan kebutuhanmu</p>
+
+        <div class="paket-container">
+            <!-- Paket 1: Hemat -->
+            <div class="paket-kartu">
+                <div class="paket-header">
+                    <h3>Paket Hemat</h3>
+                    <div class="paket-harga">Rp 450.000</div>
+                    <p>/orang</p>
+                </div>
+                <div class="paket-isi">
+                    <ul>
+                        <li>✅ Wisata 1 Destinasi</li>
+                        <li>✅ Transportasi Bus</li>
+                        <li>✅ Makan 1x</li>
+                        <li>✅ Tiket Masuk</li>
+                        <li>❌ Penginapan</li>
+                    </ul>
+                    <a href="index.html#kontak" class="btn-pesan">Pesan Sekarang</a>
+                </div>
+            </div>
+
+            <!-- Paket 2: Standar -->
+            <div class="paket-kartu">
+                <div class="paket-header" style="background: #52b788;">
+                    <h3>Paket Standar</h3>
+                    <div class="paket-harga">Rp 950.000</div>
+                    <p>/orang</p>
+                </div>
+                <div class="paket-isi">
+                    <ul>
+                        <li>✅ Wisata 3 Destinasi</li>
+                        <li>✅ Transportasi AC</li>
+                        <li>✅ Makan 3x</li>
+                        <li>✅ Tiket Masuk + Pemandu</li>
+                        <li>✅ Penginapan 1 Malam</li>
+                    </ul>
+                    <a href="index.html#kontak" class="btn-pesan">Pesan Sekarang</a>
+                </div>
+            </div>
+
+            <!-- Paket 3: Premium -->
+            <div class="paket-kartu">
+                <div class="paket-header" style="background: #40916c;">
+                    <h3>Paket Premium</h3>
+                    <div class="paket-harga">Rp 1.850.000</div>
+                    <p>/orang</p>
+                </div>
+                <div class="paket-isi">
+                    <ul>
+                        <li>✅ Wisata 5 Destinasi</li>
+                        <li>✅ Transportasi Pribadi</li>
+                        <li>✅ Makan Penuh + Makan Malam</li>
+                        <li>✅ Tiket Masuk + Pemandu Ahli</li>
+                        <li>✅ Hotel Bintang 3 (2 Malam)</li>
+                    </ul>
+                    <a href="index.html#kontak" class="btn-pesan">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Jelajah Alam Indonesia — Semua Hak Dilindungi
+    </footer>
+
+</body>
+</html>
