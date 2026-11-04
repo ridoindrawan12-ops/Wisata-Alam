@@ -258,3 +258,35 @@
     </style>
 </head>
 <body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-mountain-sun"></i> Madina Alam
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a class="nav-link active" onclick="switchTab(event, 'home')">Home</a></li>
+                <li><a class="nav-link" onclick="switchTab(event, 'pricing')">Paket Tour</a></li>
+                <li><a class="nav-link" onclick="switchTab(event, 'facilities')">Fasilitas</a></li>
+                <li><a class="nav-link" onclick="switchTab(event, 'tips')">Tips & Panduan</a></li>
+                <li><a class="nav-link" onclick="switchTab(event, 'about')">About Us</a></li>
+                <li><a class="nav-link" onclick="switchTab(event, 'contact')">Kontak & FAQ</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main>
+        <!-- HOME SECTION -->
+        <section id="home" class="section-content active">
+            <div class="hero">
+                <div class="hero-text">
+                    <h1>Jelajahi Keindahan Alam <span>Mandaling Natal</span></h1>
+                    <p>Temukan surga tersembunyi di Sumatera Utara. Dari pemandian air panas alami, air terjun eksotis, hingga hijaunya Pegunungan Bukit Barisan.</p>
+                    <button class="btn" onclick="switchTab(event, 'pricing')">Lihat Paket Tour</button>
+                </div>
+                <div>
