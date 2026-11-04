@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisata Alam Mandaling Natal - Pesona Bumi Gordang Sambilan</title>
+    <!-- Google Fonts & FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #1b4332;
+            --secondary: #2d6a4f;
+            --accent: #d4a373;
+            --light: #f4f6f4;
+            --dark: #212529;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(27, 67, 50, 0.95);
+            backdrop-filter: blur(5px);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--accent);
+        }
+
+        /* Hero Section (Home) */
+        #home {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        #home h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        #home p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .btn {
+            background-color: var(--accent);
+            color: var(--dark);
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #bc6c25;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Container Section General Styling */
+        section {
+            padding: 100px 8% 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        /* Paket Tour / Harga (Pricing) */
+        #pricing {
+            background-color: #fff;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .pricing-card {
+            background: var(--light);
+            border-radius: 12px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+            border-top: 5px solid var(--secondary);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .pricing-card ul {
+            list-style: none;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .pricing-card ul li {
+            margin-bottom: 10px;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        .pricing-card ul li i {
+            color: var(--secondary);
+            margin-right: 8px;
+        }
+
+        /* About Us */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Fasilitas & Layanan */
+        #facilities {
+            background-color: #fff;
+        }
+
+        .facilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .facility-item {
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 10px;
+            background: var(--light);
+            transition: background 0.3s;
+        }
+
+        .facility-item:hover {
+            background: #e9f5ed;
+        }
+
+        .facility-item i {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .facility-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        /* Tips & Panduan */
+        .tips-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .tip-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--accent);
+        }
+
+        .tip-card h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        /* Kontak & FAQ */
+        #contact {
+            background-color: #fff;
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .contact-info h3, .faq-section h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #555;
+        }
+
+        .contact-info i {
+            color: var(--secondary);
+        }
+
+        .faq-item {
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: var(--dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            margin-top: 5px;
+            color: #666;
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Mobile Menu */
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: var(--primary);
+                padding: 20px;
+                text-align: center;
+                gap: 15px;
+            }
+            nav ul.active {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            #home h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-mountain-sun"></i> Madina<span>Wisata</span>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#pricing">Paket Tour / Harga</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#facilities">Fasilitas & Layanan</a></li>
+                <li><a href="#tips">Tips & Panduan</a></li>
+                <li><a href="#contact">Kontak & FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home">
+        <h1>Jelajahi Keindahan Alam Mandaling Natal</h1>
+        <p>Temukan pesona tersembunyi mulai dari air terjun asri, pemandian air panas alami, hingga hijaunya perbukitan Gordang Sambilan.</p>
+        <a href="#pricing" class="btn">Lihat Paket Tour</a>
+    </section>
+
+    <!-- Paket Tour / Harga Section -->
+    <section id="pricing">
+        <div class="section-title">
+            <h2>Paket Tour & Harga</h2>
+            <p>Pilih paket petualangan alam terbaik sesuai kebutuhan Anda dan keluarga.</p>
+        </div>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Paket Jelajah Kota Nopan</h3>
+                <div class="price">Rp 50.000 <span style="font-size:0.9rem; font-weight:normal;">/pax</span></div>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Kunjungan ke Air Terjun Sigalagala</li>
+                    <li><i class="fa-solid fa-check"></i> Transportasi Lokal</li>
+                    <li><i class="fa-solid fa-check"></i> Guide Lokal Berpengalaman</li>
+                    <li><i class="fa-solid fa-check"></i> Makan Siang Kuliner Khas Madina</li>
+                </ul>
+                <a href="#contact" class="btn">Pesan Sekarang</a>
+            </div>
+
+            <div class="pricing-card" style="border-top-color: var(--accent);">
+                <h3>Paket Wisata Gunung Sorik Marapi</h3>
+                <div class="price">Rp 650.000 <span style="font-size:0.9rem; font-weight:normal;">/pax</span></div>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Eksplorasi Puncak Gunung Sorik Marapi</li>
+                    <li><i class="fa-solid fa-check"></i> Wisata Budaya Gordang Sambilan</li>
+                    <li><i class="fa-solid fa-check"></i> Transportasi & Dokumentasi Foto</li>
+                    <li><i class="fa-solid fa-check"></i> Konsumsi 3x sehari & Snack Tradisional</li>
+                </ul>
+                <a href="#contact" class="btn">Pesan Sekarang</a>
+            </div>
+
+            <div class="pricing-card">
+                <h3>Paket Full Adventure Madina</h3>
+                <div class="price">Rp 1.200.000 <span style="font-size:0.9rem; font-weight:normal;">/pax</span></div>
+                <ul>
+                    <li><i class="fa-solid fa-check"></i> Pendakian & Camping Gunung Sorik Marapi</li>
+                    <li><i class="fa-solid fa-check"></i> Semua Destinasi Utama Mandaling Natal</li>
+                    <li><i class="fa-solid fa-check"></i> Fasilitas Camping Lengkap (Tenda, Alat Masak)</li>
+                    <li><i class="fa-solid fa-check"></i> Full Support Guide & Porter</li>
+                </ul>
+                <a href="#contact" class="btn">Pesan Sekarang</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <div class="section-title">
+            <h2>Tentang Kami (About Us)</h2>
+            <p>Mengenal lebih dekat dedikasi kami untuk pariwisata Mandaling Natal.</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p><strong>MadinaWisata</strong> adalah platform pemandu wisata lokal terpercaya yang berbasis di Kabupaten Mandaling Natal, Sumatra Utara. Kami hadir untuk memperkenalkan keindahan alam yang luar biasa dan kekayaan budaya lokal kepada wisatawan domestik maupun mancanegara.</p>
+                <p>Kami berkomitmen untuk memberikan pengalaman liburan yang aman, nyaman, dan berkesan, sekaligus mendukung pemberdayaan masyarakat lokal di setiap destinasi wisata yang kami kunjungi.</p>
+                <a href="#contact" class="btn" style="margin-top: 15px; display: inline-block;">Hubungi Kami</a>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Pemandangan Alam Mandaling Natal">
+            </div>
+        </div>
+    </section>
+
+    <!-- Fasilitas & Layanan Section -->
+    <section id="facilities">
+        <div class="section-title">
+            <h2>Fasilitas & Layanan</h2>
+            <p>Kami memastikan kenyamanan perjalanan Anda selama mengeksplorasi Mandaling Natal.</p>
+        </div>
+        <div class="facilities-grid">
+            <div class="facility-item">
+                <i class="fa-solid fa-car-side"></i>
+                <h3>Transportasi Nyaman</h3>
+                <p>Armada prima siap mengantar Anda menjelajahi medan pegunungan Madina dengan aman.</p>
+            </div>
+            <div class="facility-item">
+                <i class="fa-solid fa-user-tie"></i>
+                <h3>Local Guide Profesional</h3>
+                <p>Pemandu wisata berpengalaman yang paham seluk-beluk sejarah dan rute alam.</p>
+            </div>
+            <div class="facility-item">
+                <i class="fa-solid fa-utensils"></i>
+                <h3>Kuliner Khas Lokal</h3>
+                <p>Nikmati hidangan lezat khas Mandaling seperti Gulai Bulung Gadong dan Sambal Tuktuk.</p>
+            </div>
+            <div class="facility-item">
+                <i class="fa-solid fa-camera-retro"></i>
+                <h3>Dokumentasi Perjalanan</h3>
+                <p>Abadikan momen terbaik liburan Anda bersama tim fotografer profesional kami.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips & Panduan Section -->
+    <section id="tips">
+        <div class="section-title">
+            <h2>Tips & Panduan Wisata</h2>
+            <p>Persiapkan diri Anda sebelum berkunjung ke alam Mandaling Natal.</p>
+        </div>
+        <div class="tips-list">
+            <div class="tip-card">
+                <h3>1. Gunakan Pakaian yang Sesuai</h3>
+                <p>Karena banyak destinasi berupa pegunungan dan air terjun, gunakan pakaian yang menyerap keringat serta alas kaki anti-slip.</p>
+            </div>
+            <div class="tip-card">
+                <h3>2. Jaga Kebersihan Lingkungan</h3>
+                <p>Selalu bawa kantong sampah pribadi dan jangan meninggalkan jejak sampah plastik di area wisata alam.</p>
+            </div>
+            <div class="tip-card">
+                <h3>3. Hormati Budaya Lokal</h3>
+                <p>Mandaling Natal menjunjung tinggi norma adat istiadat setempat. Selalu jaga kesopanan dalam sikap dan ucapan.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontak & FAQ Section -->
+    <section id="contact">
+        <div class="section-title">
+            <h2>Kontak & FAQ</h2>
+            <p>Punya pertanyaan seputar perjalanan? Hubungi kami atau cek FAQ di bawah.</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Hubungi Kami</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Panyabungan, Kabupaten Mandaling Natal, Sumatra Utara</p>
+                <p><i class="fa-solid fa-phone"></i> +62 812-3456-7890</p>
+                <p><i class="fa-solid fa-envelope"></i> info@madinawisata.com</p>
+                <p><i class="fa-brands fa-whatsapp"></i> +62 812-3456-7890 (WhatsApp)</p>
+            </div>
+            <div class="faq-section">
+                <h3>Frequently Asked Questions (FAQ)</h3>
+                <div class="faq-item">
+                    <div class="faq-question">Bagaimana cara memesan paket tour? <i class="fa-solid fa-chevron-down"></i></div>
+                    <div class="faq-answer">Anda bisa langsung menghubungi nomor WhatsApp kami yang tertera untuk konfirmasi tanggal dan ketersediaan paket.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Apakah harga paket bisa untuk rombongan? <i class="fa-solid fa-chevron-down"></i></div>
+                    <div class="faq-answer">Tentu saja! Kami menyediakan penawaran khusus dan diskon menarik untuk trip rombongan atau *family gathering*.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Kendaraan apa yang digunakan untuk tour? <i class="fa-solid fa-chevron-down"></i></div>
+                    <div class="faq-answer">Kami menyediakan mobil ber-AC mulai dari Avanza, Innova, hingga minibus pariwisata tergantung jumlah peserta.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Wisata Alam Mandaling Natal. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript untuk Interaksi Menu & FAQ -->
+    <script>
+        // Toggle Mobile Menu
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+
+        mobileMenu.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+
+        // Tutup menu otomatis saat link diklik (untuk mobile)
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('active');
+            });
+        });
+
+        // Toggle FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
