@@ -385,3 +385,67 @@
                 </div>
             </div>
         </section>
+        <!-- KONTAK & FAQ SECTION -->
+        <section id="contact" class="section-content">
+            <h2>Kontak & FAQ</h2>
+            <p>Punya pertanyaan seputar perjalanan? Hubungi kami atau cek daftar pertanyaan populer di bawah ini.</p>
+            
+            <div style="margin-bottom: 2rem; background: var(--white); padding: 1.5rem; border-radius: 12px;">
+                <h3>Hubungi Kami Langsung:</h3>
+                <p><i class="fa-solid fa-phone"></i> WhatsApp: +62 812-3456-7890</p>
+                <p><i class="fa-solid fa-envelope"></i> Email: info@madinaalam.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> Alamat: Panyabungan, Mandaling Natal, Sumatera Utara</p>
+            </div>
+
+            <h3>Pertanyaan Populer (FAQ)</h3>
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">Bagaimana cara memesan paket tour? <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer">Anda bisa memilih paket di menu Paket Tour lalu menghubungi admin kami melalui WhatsApp untuk konfirmasi tanggal.</div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">Apakah titik penjemputan bisa disesuaikan? <i class="fa-solid fa-chevron-down"></i></div>
+                <div class="faq-answer">Ya, penjemputan bisa disesuaikan di sekitar area Panyabungan atau bandara terdekat sesuai kesepakatan.</div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Interactive JavaScript -->
+    <script>
+        // Tab Navigation Logic
+        function switchTab(event, sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section-content');
+            sections.forEach(sec => sec.classList.remove('active'));
+
+            // Remove active class from all links
+            const links = document.querySelectorAll('.nav-link');
+            links.forEach(link => link.classList.remove('active'));
+
+            // Show target section
+            document.getElementById(sectionId).classList.add('active');
+
+            // Add active class to clicked link
+            event.target.classList.add('active');
+
+            // Close mobile menu if open
+            document.getElementById('nav-menu').classList.remove('active');
+            
+            // Scroll to top smoothly
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // FAQ Toggle Accordion
+        function toggleFaq(element) {
+            element.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
